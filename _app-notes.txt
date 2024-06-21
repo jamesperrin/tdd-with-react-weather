@@ -1,0 +1,70 @@
+https://icodeit.thinkific.com/courses/take/test-driven-development-with-react/lessons/42231320-feature-add-a-city-to-weather-list
+https://icodeit.thinkific.com/courses/take/test-driven-development-with-react/lessons/42231327-refactoring-extract-sub-components
+https://icodeit.thinkific.com/courses/take/test-driven-development-with-react/lessons/42231352-ui-make-the-search-box-visually-appealing
+https://icodeit.thinkific.com/courses/take/test-driven-development-with-react/lessons/42231374-feature-implementing-weathercard-component
+https://icodeit.thinkific.com/courses/take/test-driven-development-with-react/lessons/42231395-ui-make-the-weathercard-prettier
+https://icodeit.thinkific.com/courses/take/test-driven-development-with-react/lessons/42231402-refactoring-a-final-look-at-the-implementation
+
+Using the Fetch API
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#aborting_a_fetch
+
+"jestrunner.jestCommand": "npm run test --",
+"jestrunner.debugOptions": {
+    "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+    "runtimeArgs": [
+      "test",
+      "${fileBasename}",
+      "--runInBand",
+      "--no-cache",
+      "--watchAll=false",
+      "--color"
+    ]
+},
+
+https://docs.npmjs.com/cli/v10/commands/npm-install
+npm install --only=prod
+npm install --only=dev
+npm prune
+npm prune --production
+
+npm install -g npm@latest
+npx create-react-app tdd-with-react-weather --template typescript
+
+npm install dotenv
+npm install @types/jest@latest @types/node@latest
+npm install @testing-library/user-event@latest@latest @testing-library/react@latest
+
+npm install --save-dev jest
+npm init jest@latest
+
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+npm install --save-dev @babel/preset-typescript
+npm install --save-dev @babel/plugin-proposal-private-property-in-object
+npm install --save-dev react-test-renderer  @testing-library/jest-dom
+
+npm uninstall web-vitals
+
+import logo from './logo.svg'; -- Causes a Typscript error
+
+  Fix - Create globals.d.ts with contents
+
+    declare module '*.svg' {
+      const content: string;
+      export default content;
+    }
+
+  Add to tsconfig.json
+
+  }
+    "files": [
+      "globals.d.ts"
+    ]
+  }
+
+npm install --save-dev miragejs
+
+
+curl -X 'GET' 'http://api.openweathermap.org/geo/1.0/direct?q=Melbourne&limit=5&appid=' -H 'accept: */*'| json_pp
+
+curl -X 'GET' -k 'https://api.openweathermap.org/geo/1.0/direct?q=Melbourne&limit=5&appid=' -H 'accept: */*'| json_pp
